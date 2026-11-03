@@ -73,6 +73,29 @@
                 -webkit-text-fill-color: transparent;
                 color: transparent;
             }
+
+            .redir-btn {
+                flex: 1 1 0;
+                min-width: 0;
+                width: 100%;
+                padding: 10px 6px;
+                font-size: clamp(12px, 2.5vw, 14px);
+                border-radius: 25px;
+                outline: none;
+                font-weight: 600;
+                cursor: pointer;
+                transition: all 0.2s ease;
+                background: linear-gradient(
+                    to right,
+                    var(--astral-aurora-green) 0%,
+                    var(--astral-boreal-blue) 50%,
+                    var(--astral-space-purple) 100%
+                );
+                color: #ffffff !important;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
+            }
         </style>
     </head>
     <body>
@@ -81,5 +104,6 @@
         </header>
 
         <p class="color-text">Welcome to Astral, your new AI assistant.</p>
+        <button class="redir-btn"></button>
     </body>
 </html>
