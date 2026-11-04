@@ -1,1 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/png" href="onboarding/chat/astral-logo-planet.png?v=1">
+        <title>Welcome - Astral</title>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');            
 
+            :root {
+                --astral-aurora-green: #00f0dd;
+                --astral-boreal-blue: #53b4dd;
+                --astral-space-purple: #a878ff;
+            }
+
+            *, *::before, *::after {
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+                font-family: "Urbanist", sans-serif;
+                color: #ffffff;
+            }
+
+            html, body {
+                background-color: #222222;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                min-height: 100vh;
+                width: 100%;
+                padding: 0 12px;
+                overflow-x: hidden; 
+                padding-top: 55px;
+            }
+
+            header {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100vw;
+                margin-left: calc(-50vw + 50%);
+                margin-right: calc(-50vw + 50%);
+                background-color: #222222 !important;
+                z-index: 1000;
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                gap: 12px;
+                padding: 4px 24px;
+                border-bottom: 1px solid #555555;
+            }
+
+            .logo {
+                width: clamp(72px, 15vw, 96px);
+                height: clamp(72px, 15vw, 96px);
+                object-fit: contain;
+                flex-shrink: 0;
+            }
+
+            .color-text {
+                font-size: 50px;
+                font-weight: 700;
+                display: inline-block;
+                background: linear-gradient(
+                    to right,
+                    var(--astral-aurora-green) 0%,
+                    var(--astral-boreal-blue) 50%,
+                    var(--astral-space-purple) 100%
+                );
+                -webkit-background-clip: text;
+                background-clip: text;
+                -webkit-text-fill-color: transparent;
+                color: transparent;
+                align-self: start;
+            }
+
+            .color-btn {
+                flex: 1 1 0;
+                min-width: 200px;
+                width: 200px;
+                max-width: 200px;
+                min-height: 50px;
+                height: 50px;
+                max-height: 50px;
+                margin-top: 25px;
+                margin-left: 0;
+                margin-right: auto;
+                padding: 10px 6px;
+                font-size: 25px;
+                border-radius: 25px;
+                outline: none;
+                font-weight: 600;
+                cursor: pointer;
+                transition: all 0.2s ease;
+                background: linear-gradient(
+                    to right,
+                    var(--astral-aurora-green) 0%,
+                    var(--astral-boreal-blue) 50%,
+                    var(--astral-space-purple) 100%
+                );
+                color: #ffffff !important;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
+                align-items: start
+                align-self: start;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <img class="logo" src="../astral-logo-planet.png" alt="Astral logo">
+        </header>
+
+        <p class="color-text">Welcome to Astral, your new AI assistant.</p>
+        <button class="color-btn">Get Started</button>
+    </body>
+</html>
