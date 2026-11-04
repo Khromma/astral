@@ -1,0 +1,29 @@
+<!doctype html><html lang="en"><head><style>input{width:200px;height:200px;}button{width:100px;height:100px;}</style></head><body><input id="input" type="text"><button id="button" onclick="record()">Record</button><script>
+  const input = document.getElementById('input');
+
+  function record() {
+const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+
+if (!SpeechRecognition) {
+  console.log("Browser does not support Web Speech API.");
+} else {
+  const recognition = new SpeechRecognition();
+
+  recognition.lang = 'en';         
+  recognition.continuous = true;       
+  recognition.interimResults = false;  
+
+  recognition.onresult = (event) => {
+    const currentResultIndex = event.resultIndex;
+    const transcript = event.results[currentResultIndex][0].transcript;
+    
+    input.value = transcript;
+  };
+
+  recognition.onerror = (event) => {
+    console.error("Error: ", event.error);
+  };
+}
+ 
+  }
+    </script></body></html>
