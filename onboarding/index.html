@@ -154,7 +154,7 @@
         </header>
 
         <p class="color-text">Welcome to Astral, your new AI assistant.</p>
-        <button class="color-btn" id="chatBtn">Get Started</button>
+        <button class="color-btn" id="chatBtn" onclick="goToPlace('../chat/')">Get Started</button>
 
         <div class="end-line"></div>
         <div class="creator-info">
@@ -166,11 +166,9 @@
         <script>
             const chatBtn = document.getElementById("chatBtn");
             
-            function goToChat() {
-                window.location.href = "../chat/";
+            function goToPlace(place) {
+                window.location.href = place;
             }
-
-            chatBtn.addEventListener("click", goToChat);
         </script>
     </body>
 </html>
