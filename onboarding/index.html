@@ -114,6 +114,15 @@
         </header>
 
         <p class="color-text">Welcome to Astral, your new AI assistant.</p>
-        <button class="color-btn">Get Started</button>
+        <button class="color-btn" id="chatBtn">Get Started</button>
+        <script>
+            const chatBtn = document.getElementById("chtBtn");
+            
+            function goToChat() {
+                window.location.href = "../chat/";
+            }
+
+            chatBtn.addEventListener("click", goToChat);
+        </script>
     </body>
 </html>
